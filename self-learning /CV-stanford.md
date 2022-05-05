@@ -58,7 +58,9 @@ $$Loss_i = \sum_{j \neq y_i}^n \max{(0, s_j - s_{y_{i}}+1)}$$
 
 e.g.:
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406221834641.png" alt="image-20220406221834641" style="zoom:50%;" />
+<img src="./stanford_cv_image/image-20220406221834641.png" alt="image-20220406221834641" style="zoom:50%;" />
+
+
 
 **the range of this Loss:**
 
@@ -252,7 +254,7 @@ commonly, there is not overlap while pooling processing
 
 ## Lecture 6 | Training Neural Networks I
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406222400996.png" alt="image-20220406222400996" style="zoom:80%;" />
+<img src="./stanford_cv_image/image-20220406222400996.png" alt="image-20220406222400996" style="zoom:80%;" />
 
 #### **activation function:**
 
@@ -270,7 +272,7 @@ commonly, there is not overlap while pooling processing
 
 * Maxout = $max(w_1^T x+b_1,w_2^T x+b_2 )$
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406222440989.png" alt="image-20220406222440989" style="zoom:80%;" />
+<img src="./stanford_cv_image/image-20220406222440989.png" alt="image-20220406222440989" style="zoom:80%;" />
 
 
 
@@ -298,17 +300,17 @@ normalizing data make the gradient descent more efficient
 
 **guarantee the output data distribution, to make sure the performance of back propagation.**
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406222549657.png" alt="image-20220406222549657" style="zoom:80%;" />
+<img src="./stanford_cv_image/image-20220406222549657.png" alt="image-20220406222549657" style="zoom:80%;" />
 
 **batch normalization works in each neuron. Due to each operation in one neuron process one mini-batch data one time , so can use those data samples in the batch to do normalization in each dimension among `n` data**
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406222611597.png" alt="image-20220406222611597" style="zoom:80%;" />
+<img src="./stanford_cv_image/image-20220406222611597.png" alt="image-20220406222611597" style="zoom:80%;" />
 
 **$\beta$ and $\gamma$ are learned parameter**, after normalization, the output is a gaussian distribution. while which does not gaurantee that it is the optimal data distribution. therefore introduce $\beta$ and $\gamma$ to increase flexibility. Of course, the final $y_i$ can be identical with normilized $x_i$. but again, this process just increase the flexibility, and let the model makes the best decision(use the optimal data distribution )
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406222633595.png" alt="image-20220406222633595" style="zoom:80%;" />
+<img src="./stanford_cv_image/image-20220406222633595.png" alt="image-20220406222633595" style="zoom:80%;" />
 
-!<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406222652135.png" alt="image-20220406222652135" style="zoom:50%;" />
+!<img src="./stanford_cv_image/image-20220406222652135.png" alt="image-20220406222652135" style="zoom:50%;" />
 
 
 
@@ -354,17 +356,17 @@ use `velocity` replace gradient
 
 the initialization of velocity is `0`
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406222813529.png" alt="image-20220406222813529" style="zoom:60%;" />
+<img src="./stanford_cv_image/image-20220406222813529.png" alt="image-20220406222813529" style="zoom:60%;" />
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406222839687.png" alt="image-20220406222839687" style="zoom:50%;" />
-
---------
-
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406222901958.png" alt="image-20220406222901958" style="zoom:50%;" />
+<img src="./stanford_cv_image/image-20220406222839687.png" alt="image-20220406222839687" style="zoom:50%;" />
 
 --------
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406222937797.png" alt="image-20220406222937797" style="zoom:67%;" />
+<img src="./stanford_cv_image/image-20220406222901958.png" alt="image-20220406222901958" style="zoom:50%;" />
+
+--------
+
+<img src="./stanford_cv_image/image-20220406222937797.png" alt="image-20220406222937797" style="zoom:67%;" />
 
 
 
@@ -372,13 +374,13 @@ the initialization of velocity is `0`
 
 decay learning rate (the second tuning parameters --- non-decay version should be tried first)
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406223011624.png" alt="image-20220406223011624" style="zoom:60%;" />
+<img src="./stanford_cv_image/image-20220406223011624.png" alt="image-20220406223011624" style="zoom:60%;" />
 
 usually, too large for deep neural network
 
 so -- quasi-Newton(BGFS)
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406223054014.png" alt="image-20220406223054014" style="zoom:67%;" />
+<img src="./stanford_cv_image/image-20220406223054014.png" alt="image-20220406223054014" style="zoom:67%;" />
 
 
 
@@ -428,7 +430,7 @@ tensor in pytorch is a nparray running in GPU
 * GoogleNet --- 22 layers
   * inception module
     * desigen a good local network topology(network within a network) and then stack these modules on the top of each other
-    * <img src="/Users/liu/Library/Application Support/typora-user-images/image-20220406184659932.png" alt="image-20220406184659932" style="zoom:25%;" />
+    * <img src="./stanford_cv_image/image-20220406184659932.png" alt="image-20220406184659932" style="zoom:25%;" />
 
 * ResNet ---- 152 layers
   * deeper network actually do not gaurantee the better performance even in the training dataset
@@ -456,7 +458,7 @@ tensor in pytorch is a nparray running in GPU
 
 Data --> model --> distribution -->new samples 
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220503150511713.png" alt="image-20220503150511713" style="zoom:35%;" />
+<img src="./stanford_cv_image/image-20220503150511713.png" alt="image-20220503150511713" style="zoom:35%;" />
 
 
 
@@ -466,75 +468,101 @@ Data --> model --> distribution -->new samples
 
 1. PixelRNN (2016)
 
-   1. <img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 3.48.53 PM.png" alt="Screen Shot 2022-05-03 at 3.48.53 PM" style="zoom:33%;" />
+   1. <img src="./stanford_cv_image/Screen Shot 2022-05-03 at 3.48.53 PM.png" alt="Screen Shot 2022-05-03 at 3.48.53 PM" style="zoom:33%;" />
    2. Drawback: slow
 
 2.  PixelCNN (2016)
 
-   1. <img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 3.50.04 PM.png" alt="Screen Shot 2022-05-03 at 3.50.04 PM" style="zoom:33%;" />
-
+   1. <img src="./stanford_cv_image/Screen Shot 2022-05-03 at 3.50.04 PM.png" alt="Screen Shot 2022-05-03 at 3.50.04 PM" style="zoom:33%;" />
    2. training is much faster than PixelRNN (can paralleize convolutions since context region values known from training images)
-
    3. Generation must still proceed sequentially --> still slow
 
-      
+   * Summary
+
+   <img src="./stanford_cv_image/Screen Shot 2022-05-04 at 2.50.41 PM.png" alt="Screen Shot 2022-05-04 at 2.50.41 PM" style="zoom:33%;" />
+
+   
 
 ### Variational Autoencoders (VAE)
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 3.57.50 PM.png" alt="Screen Shot 2022-05-03 at 3.57.50 PM" style="zoom:33%;" />
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 3.57.50 PM.png" alt="Screen Shot 2022-05-03 at 3.57.50 PM" style="zoom:33%;" />
 
 
 
 1. Autoencoder:
    * Input --Encoderer---> latent feature layer --Decoder--> output layer  ( L2 loss : input and output)
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 4.00.50 PM.png" alt="Screen Shot 2022-05-03 at 4.00.50 PM" style="zoom:33%;" />
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 4.00.50 PM.png" alt="Screen Shot 2022-05-03 at 4.00.50 PM" style="zoom:33%;" />
 
-​			after train, link to the downflow task to do some supervised learning task.
+​			after train, link to the downflow task to do some supervised learning task. (encoder is used as a feature extractor.)
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 4.01.57 PM.png" alt="Screen Shot 2022-05-03 at 4.01.57 PM" style="zoom:33%;" />
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 4.01.57 PM.png" alt="Screen Shot 2022-05-03 at 4.01.57 PM" style="zoom:33%;" />
 
 
 
 * Variational autoencoder
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 4.03.56 PM.png" alt="Screen Shot 2022-05-03 at 4.03.56 PM" style="zoom:33%;" />
+  given a prior distribution of  $Z$, this underlying feature generate the output image 
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 4.09.07 PM.png" alt="Screen Shot 2022-05-03 at 4.09.07 PM" style="zoom:30%;" />
+  we can use neural network to represent complex relationship in the model
 
-
-
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 4.12.22 PM.png" alt="Screen Shot 2022-05-03 at 4.12.22 PM" style="zoom:35%;" />
-
-<img src="/Users/liu/Library/Application Support/typora-user-images/image-20220503161458601.png" alt="image-20220503161458601" style="zoom:33%;" />
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 4.03.56 PM.png" alt="Screen Shot 2022-05-03 at 4.03.56 PM" style="zoom:33%;" />
 
 
 
-overall picture
+<img src="./stanford_cv_image/image-20220504160905402.png" alt="image-20220504160905402" style="zoom:30%;" />
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 4.18.48 PM.png" alt="Screen Shot 2022-05-03 at 4.18.48 PM" style="zoom:33%;" />
+
+
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 4.09.07 PM.png" alt="Screen Shot 2022-05-03 at 4.09.07 PM" style="zoom:30%;" />
+
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 4.18.48 PM.png" alt="Screen Shot 2022-05-03 at 4.18.48 PM" style="zoom:25%;" />
+
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 4.12.22 PM.png" alt="Screen Shot 2022-05-03 at 4.12.22 PM" style="zoom:35%;" />
+
+<img src="./stanford_cv_image/image-20220503161458601.png" alt="image-20220503161458601" style="zoom:33%;" />
+
+
+
+**overall picture**
+
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 4.18.48 PM.png" alt="Screen Shot 2022-05-03 at 4.18.48 PM" style="zoom:33%;" />
+
+
 
 
 
 After training -- generate data
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 4.21.59 PM.png" alt="Screen Shot 2022-05-03 at 4.21.59 PM" style="zoom:33%;" />
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 4.21.59 PM.png" alt="Screen Shot 2022-05-03 at 4.21.59 PM" style="zoom:33%;" />
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 4.24.34 PM.png" alt="Screen Shot 2022-05-03 at 4.24.34 PM" style="zoom:33%;" />
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 4.24.34 PM.png" alt="Screen Shot 2022-05-03 at 4.24.34 PM" style="zoom:33%;" />
 
-
-
-### GAN
-
-### 	-- Generative Adversarial Network
-
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-03 at 4.34.56 PM.png" alt="Screen Shot 2022-05-03 at 4.34.56 PM" style="zoom:25%;" />
+<img src="./stanford_cv_image/Screen Shot 2022-05-04 at 4.42.58 PM.png" alt="Screen Shot 2022-05-04 at 4.42.58 PM" style="zoom:33%;" />
 
 
 
+### GAN -- Generative Adversarial Network
+
+<img src="./stanford_cv_image/Screen Shot 2022-05-03 at 4.34.56 PM.png" alt="Screen Shot 2022-05-03 at 4.34.56 PM" style="zoom:25%;" />
+
+<img src="./stanford_cv_image/Screen Shot 2022-05-04 at 10.37.47 AM.png" alt="Screen Shot 2022-05-04 at 10.37.47 AM" style="zoom:50%;" />
 
 
-<img src="/Users/liu/Library/Application Support/typora-user-images/Screen Shot 2022-05-04 at 10.37.47 AM.png" alt="Screen Shot 2022-05-04 at 10.37.47 AM" style="zoom:50%;" />
+
+* Training
+
+<img src="./stanford_cv_image/Screen Shot 2022-05-04 at 5.20.51 PM.png" alt="Screen Shot 2022-05-04 at 5.20.51 PM" style="zoom:30%;" />
+
+
+
+<img src="./stanford_cv_image/Screen Shot 2022-05-04 at 5.25.22 PM.png" alt="Screen Shot 2022-05-04 at 5.25.22 PM" style="zoom:25%;" />
+
+
+
+<img src="./stanford_cv_image/Screen Shot 2022-05-04 at 5.28.35 PM.png" alt="Screen Shot 2022-05-04 at 5.28.35 PM" style="zoom:33%;" />
+
+**first， train discriminator network， and then train generator network** 
 
 
 
@@ -544,13 +572,21 @@ after training, use generator network to generate new image
 
 
 
-### recap
+**Can use Convolutional Architecture to improve the performance of GAN.**
 
-![image-20220504112233061](/Users/liu/Library/Application Support/typora-user-images/image-20220504112233061.png)
+#### GAN Summary
+
+<img src="./stanford_cv_image/Screen Shot 2022-05-04 at 5.37.00 PM.png" alt="Screen Shot 2022-05-04 at 5.37.00 PM" style="zoom:33%;" />
 
 
 
 
 
-## Reinforcement Learning 
+### Recap of Generative Model
+
+<img src="./stanford_cv_image/image-20220504112233061.png" alt="image-20220504112233061" style="zoom:50%;" />
+
+
+
+## Lecture 14 | Reinforcement Learning 
 
