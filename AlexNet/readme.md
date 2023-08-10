@@ -26,6 +26,6 @@ C = category
 $$
 
 ### reference 
-[original paper](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+[original paper](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)  
 [Explanation PowerPoint](https://cvml.ista.ac.at/courses/DLWT_W17/material/AlexNet.pdf)
 
