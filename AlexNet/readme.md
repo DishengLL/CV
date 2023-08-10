@@ -16,7 +16,7 @@ AlexNet 在2012年提出，以较为简单的结果取得了当年图像识别�
 ## Loss Function
 
 $$
-L(W) = 
+L(W) = \sum{N}{i=1}\sum{1000}{C=1} -y_
 $$
 
 
