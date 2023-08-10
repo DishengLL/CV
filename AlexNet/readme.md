@@ -24,7 +24,7 @@ x L(W) = \sum^{N}_{i=1}\sum^{1000}_{C=1} -y_{ic}\log{f_{c}(x_i)} + \epsilon {||
 N = the \space number \space of \space samples
 \\
 C = category
-$$
+$$ 
 
 ## reference 
 [original paper](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)  
