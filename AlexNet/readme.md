@@ -19,7 +19,7 @@
 
 ## Loss Function
 $$
-L(W) = \sum^{N}_{i=1}\sum^{1000}_{C=1} -y_{ic}\log{f_{c}(x_i)} + \epsilon {||w||^{2}_{2}}\\N = the \space number \space of \space samples\\C = category
+L(W) = \sum^{N}_{i=1}\sum^{1000}_{C=1} -y_{ic}\log{f_{c}(x_i)} + \epsilon {||w||^{2}_{2}}
 $$ 
 
 ## reference 
