@@ -1,4 +1,4 @@
-**AlexNet 在2012年提出，以较为简单的结果取得了当年图像识别比赛中傲人的成绩**
+**AlexNet在2012年提出，以较为简单的结构取得了当年图像识别比赛中的傲人成绩**
 
 <img width="1114" alt="image" src="https://github.com/DishengLL/CV/assets/39432361/4982917b-989e-4c4e-b035-8b97f29fa3a6">
 
