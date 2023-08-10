@@ -15,6 +15,7 @@
 ## 工程
 - [ ] 使用2个GPU分布式训练
 - [ ] 两个GPU只在特定的layer进行通信
+> What, Why and How
 
 ## Loss Function
 $$
