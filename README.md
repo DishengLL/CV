@@ -3,7 +3,7 @@
 ## models
 
 1. AlexNet     
-    [Link](AlexNet.ipynb)
+    [Link](https://github.com/DishengLL/CV/tree/main/AlexNet)
 2. VggNet  
     [Link](VggNet.ipynb)
 3. GoogLeNet  
