@@ -16,6 +16,9 @@
 - [ ] 使用2个GPU分布式训练
 - [ ] 两个GPU只在特定的layer进行通信
 > What, Why and How
+> Putting half the kernels (or neurons) on each GPU (2 GPUs)
+> Due to the limitation of memory size of GTX 580 GPU, it turns out that 1.2 million training examples are enough to train networks which are too big to fit on one GPU.
+> The GPUs communicate only in certain layers. This means that, for example, the kernels of layer 3 take input from all kernel maps in layer 2. However, kernels in layer 4 take input only from those kernel maps in layer 3 which reside on the same GPU
 
 ## Loss Function
 ```math
