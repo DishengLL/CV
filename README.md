@@ -14,7 +14,8 @@
     [Link](fast R-CNN.ipynb)
 6. Faster R-CNN  
     [Link](Faster R-CNN.ipynb)
-7. Yolo  
+7. Mask R-CNN
+8. Yolo  
     [Link](Yolo.ipynb)
 
 
