@@ -21,6 +21,7 @@
 > The GPUs communicate only in certain layers. This means that, for example, the kernels of layer 3 take input from all kernel maps in layer 2. However, kernels in layer 4 take input only from those kernel maps in layer 3 which reside on the same GPU
 
 ## Loss Function
+使用交叉熵函数作为损失函数
 ```math
 L(W) = \sum^{N}_{i=1}\sum^{1000}_{C=1} -y_{ic}\log{f_{c}(x_i)} + \epsilon {||w||^{2}_{2}}
 ```
