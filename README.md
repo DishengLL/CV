@@ -18,6 +18,10 @@
 8. Yolo  
     [Link](Yolo.ipynb)
 
+9. ViT
+
+10. Swin Transformer
+
 
 
 ## tools
