@@ -11,7 +11,7 @@
 4. R-CNN  
     [Link](R-CNN.ipynb)
 5. fast R-CNN  
-    [Link](fast R-CNN.ipynb)
+    [Link](fast R-CNN.ipynb)   
     [README](./fast-RCNN/README.md)
 6. Faster R-CNN  
     [Link](Faster R-CNN.ipynb)
