@@ -16,13 +16,13 @@ RCNN有不错的效果，但是运行的性能不行。其中有一部分原因�
 
   - [x] 对feature maps 进行不同的分割--1x1，2x2， 3x3，处理后将得到的feature maps展开并拼接。feed into the next layer。
 
-    <img src="/Users/liu/Desktop/github/CV/image/pyramid pooling.png" alt="pyramid pooling" style="zoom:80%;" />
+    <img src="../image/pyramid pooling.png" alt="pyramid pooling" style="zoom:80%;" />
 
     **Comparison between R-CNN and Fast R-CNN**
 
-    <img src="/Users/liu/Desktop/github/CV/image/pipeline.png" style="zoom:90%;" />
+    <img src="../image/pipeline.png" style="zoom:90%;" />
 
-    <img src="/Users/liu/Desktop/github/CV/image/compare.jpeg" style="zoom:80%;" />
+    <img src="../image/compare.jpeg" style="zoom:80%;" />
 
     
 
