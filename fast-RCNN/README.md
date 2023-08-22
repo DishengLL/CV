@@ -28,11 +28,11 @@ RCNN有不错的效果，但是运行的性能不行。其中有一部分原因�
 
 #### architecture
 
-<img src="/Users/liu/Desktop/github/CV/image/rcnn.webp" style="zoom:67%;" />
+<img src="../image/rcnn.webp" style="zoom:67%;" />
 
-<img src="/Users/liu/Desktop/github/CV/image/sppNet.png" style="zoom:67%;" />
+<img src="../image/sppNet.png" style="zoom:67%;" />
 
-<img src="/Users/liu/Desktop/github/CV/image/fast-rcnn.png" style="zoom:67%;" />
+<img src="../image/fast-rcnn.png" style="zoom:67%;" />
 
 
 
